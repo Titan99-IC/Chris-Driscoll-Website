@@ -7,13 +7,13 @@ function handleFormSubmit(event) {
     const form = event.target;
     const name = form.querySelector('input[name="name"]').value;
     const phone = form.querySelector('input[name="phone"]').value;
-    const issue = form.querySelector('textarea[name="issue"]').value;
+    const message = form.querySelector('textarea[name="message"]').value;
     
     // Log form data (in production, this would send to a backend)
-    console.log('Free Estimate Request:', {
+    console.log('Contact Message:', {
         name: name,
         phone: phone,
-        issue: issue,
+        message: message,
         timestamp: new Date().toISOString()
     });
     
@@ -38,6 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Attach form submit handler
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleFormSubmit);
+    }
 });
 
 // Add animation on scroll
@@ -57,7 +63,7 @@ const observer = new IntersectionObserver(function(entries) {
 
 // Observe cards for animation
 document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.problem-card, .service-item, .benefit-card');
+    const cards = document.querySelectorAll('.service-card, .benefit-card');
     cards.forEach(card => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
