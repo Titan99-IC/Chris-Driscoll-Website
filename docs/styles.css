@@ -442,10 +442,10 @@ a:hover {
   border-radius: var(--radius-xl);
   transition: all var(--transition-normal);
   box-shadow: var(--shadow-md);
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .service-card:hover {
@@ -466,31 +466,34 @@ a:hover {
 }
 
 .service-icon-container {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
+  width: auto;
+  height: auto;
+  border-radius: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: var(--spacing-lg);
-  font-size: 36px;
+  justify-content: flex-start;
+  margin-bottom: var(--spacing-md);
+  font-size: 32px;
+  background-color: transparent;
 }
 
 .service-card-primary .service-icon-container {
-  background-color: rgba(26, 35, 50, 0.1);
+  background-color: transparent;
 }
 
 .service-card-secondary .service-icon-container {
-  background-color: rgba(39, 174, 96, 0.1);
+  background-color: transparent;
 }
 
 .service-card-tertiary .service-icon-container {
-  background-color: rgba(255, 107, 53, 0.1);
+  background-color: transparent;
 }
 
 .service-icon {
   display: block;
-  font-size: 36px;
+  font-size: 32px;
+  color: #C9724E;
+  filter: brightness(0.9) saturate(1.2);
 }
 
 .service-card-title {
@@ -533,7 +536,7 @@ a:hover {
 
 .service-list-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--spacing-md);
   background-color: #F5F5F5;
   border-left: 4px solid #C9724E;
@@ -546,25 +549,15 @@ a:hover {
   box-shadow: var(--shadow-md);
 }
 
-.service-bullet {
-  display: inline-block;
+.service-list-icon {
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(135deg, #C9724E 0%, #D8825B 100%);
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  content: '✓';
+  width: 28px;
+  height: 28px;
+  margin-top: 2px;
 }
 
-.service-bullet::before {
-  content: '✓';
+.service-bullet {
+  display: none;
 }
 
 .service-label {
