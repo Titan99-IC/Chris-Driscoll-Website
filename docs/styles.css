@@ -455,8 +455,8 @@ a:hover {
 }
 
 .section-header {
-   text-align: center;
-   margin-bottom: var(--spacing-3xl);
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
 }
 
 .services-section .section-header {
@@ -466,10 +466,23 @@ a:hover {
 }
 
 .section-title {
-   font-size: clamp(28px, 4vw, 40px);
-   color: #1a2332;
-   margin-bottom: var(--spacing-md);
-   font-weight: var(--font-weight-bold);
+  font-size: clamp(28px, 4vw, 40px);
+  color: #1a2332;
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--font-weight-bold);
+  position: relative;
+  padding-left: var(--spacing-lg);
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 2px;
 }
 
 .section-subtitle {
@@ -485,6 +498,11 @@ a:hover {
    ======================================== */
 
 .services-section {
+  padding: 50px var(--spacing-lg) 32px var(--spacing-lg);
+  background-color: #ffffff;
+}
+
+.services-section .additional-services {
   background-color: #F5F5F5;
   background-image: 
     repeating-linear-gradient(
@@ -494,7 +512,9 @@ a:hover {
       transparent 2px,
       transparent 4px
     );
-  padding: var(--spacing-3xl) var(--spacing-lg);
+  padding: 32px 24px;
+  border-radius: var(--radius-xl);
+  margin-top: 20px;
 }
 
 .featured-services-wrapper {
@@ -724,8 +744,11 @@ a:hover {
    ======================================== */
 
 .why-us-section {
+  padding: 32px var(--spacing-lg);
   background-color: #F5F5F5;
-  padding: var(--spacing-3xl) var(--spacing-lg);
+}
+
+.why-us-layout {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3xl);
@@ -814,8 +837,11 @@ a:hover {
    ======================================== */
 
 .contact-section {
-  padding: var(--spacing-3xl) var(--spacing-lg);
+  padding: 32px var(--spacing-lg);
   background-color: #ffffff;
+}
+
+.contact-section-title {
   color: #1a2332;
 }
 
