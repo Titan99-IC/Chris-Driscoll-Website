@@ -67,6 +67,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 75px;
 }
 
 body {
@@ -497,10 +498,6 @@ a:hover {
    ======================================== */
 
 .services-section {
-  position: relative;
-  padding-bottom: 32px;
-  padding-left: var(--spacing-lg);
-  padding-right: var(--spacing-lg);
   background-color: #F5F5F5;
   background-image: 
     repeating-linear-gradient(
@@ -510,13 +507,7 @@ a:hover {
       transparent 2px,
       transparent 4px
     );
-}
-
-.services-section::before {
-  display: block;
-  content: '';
-  height: 75px;
-  margin-top: -75px;
+  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-lg);
 }
 
 .featured-services-wrapper {
@@ -746,21 +737,11 @@ a:hover {
    ======================================== */
 
 .why-us-section {
-  position: relative;
-  padding-bottom: 32px;
-  padding-left: var(--spacing-lg);
-  padding-right: var(--spacing-lg);
   background-color: #F5F5F5;
+  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-lg);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3xl);
-}
-
-.why-us-section::before {
-  display: block;
-  content: '';
-  height: 75px;
-  margin-top: -75px;
 }
 
 .why-us-intro {
@@ -846,19 +827,9 @@ a:hover {
    ======================================== */
 
 .contact-section {
-  position: relative;
-  padding-bottom: 32px;
-  padding-left: var(--spacing-lg);
-  padding-right: var(--spacing-lg);
+  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-lg);
   background-color: #ffffff;
   color: #1a2332;
-}
-
-.contact-section::before {
-  display: block;
-  content: '';
-  height: 75px;
-  margin-top: -75px;
 }
 
 .contact-layout {
