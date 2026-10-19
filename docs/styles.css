@@ -248,6 +248,16 @@ a:hover {
 
 .hero {
   background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
+  background-attachment: fixed;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.04) 0,
+      rgba(255, 255, 255, 0.04) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
   color: #ffffff;
   padding: var(--spacing-3xl) var(--spacing-lg);
   text-align: center;
@@ -425,8 +435,23 @@ a:hover {
    ======================================== */
 
 .services-section {
-  padding: 60px var(--spacing-lg) 40px var(--spacing-lg);
+  padding: 50px var(--spacing-lg) 32px var(--spacing-lg);
   background-color: #ffffff;
+}
+
+.services-section .additional-services {
+  background-color: #F5F5F5;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(201, 114, 78, 0.025) 0,
+      rgba(201, 114, 78, 0.025) 2px,
+      transparent 2px,
+      transparent 4px
+    );
+  padding: 32px 24px;
+  border-radius: var(--radius-xl);
+  margin-top: 20px;
 }
 
 .featured-services {
@@ -539,6 +564,14 @@ a:hover {
   align-items: flex-start;
   gap: var(--spacing-md);
   background-color: #F5F5F5;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(201, 114, 78, 0.025) 0,
+      rgba(201, 114, 78, 0.025) 2px,
+      transparent 2px,
+      transparent 4px
+    );
   border-left: 4px solid #C9724E;
   padding: var(--spacing-md);
   border-radius: var(--radius-md);
@@ -591,7 +624,7 @@ a:hover {
    ======================================== */
 
 .why-us-section {
-  padding: 40px var(--spacing-lg);
+  padding: 32px var(--spacing-lg);
   background-color: #F5F5F5;
 }
 
@@ -678,7 +711,7 @@ a:hover {
    ======================================== */
 
 .contact-section {
-  padding: 40px var(--spacing-lg);
+  padding: 32px var(--spacing-lg);
   background-color: #ffffff;
 }
 
