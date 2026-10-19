@@ -4,9 +4,9 @@
 
 :root {
   /* Color Palette */
-  --primary: #0066cc;        /* Professional blue */
-  --primary-dark: #004399;   /* Dark blue */
-  --accent: #ff6b35;         /* Warm orange accent */
+  --primary: #1a2332;        /* Dark navy */
+  --primary-dark: #0f1419;   /* Darker navy */
+  --accent: #C9724E;         /* Warm copper */
   --success: #27ae60;        /* Green for trust */
   --warning: #f39c12;        /* Amber */
   --neutral-dark: #2c3e50;   /* Near black */
@@ -109,13 +109,13 @@ p {
 }
 
 a {
-  color: var(--primary);
+  color: #1a2332;
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--primary-dark);
+  color: #0f1419;
 }
 
 /* ========================================
@@ -123,8 +123,8 @@ a:hover {
    ======================================== */
 
 .header {
-  background-color: #ffffff;
-  border-bottom: 1px solid var(--border-color);
+  background-color: var(--primary);
+  border-bottom: 1px solid var(--accent);
   padding: var(--spacing-md) var(--spacing-lg);
   position: sticky;
   top: 0;
@@ -149,13 +149,13 @@ a:hover {
 .brand-name {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
-  color: var(--primary);
+  color: #ffffff;
   margin-bottom: var(--spacing-xs);
 }
 
 .brand-credential {
   font-size: var(--font-size-xs);
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: var(--font-weight-regular);
   margin: 0;
 }
@@ -171,12 +171,12 @@ a:hover {
 .nav-link {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
-  color: var(--text-primary);
+  color: rgba(255, 255, 255, 0.9);
   transition: color var(--transition-fast);
 }
 
 .nav-link:hover {
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .header-phone-cta {
@@ -185,7 +185,7 @@ a:hover {
   align-items: center;
   gap: var(--spacing-sm);
   padding: var(--spacing-sm) var(--spacing-md);
-  background-color: var(--primary);
+  background-color: var(--accent);
   color: #ffffff;
   border-radius: var(--radius-lg);
   font-weight: var(--font-weight-medium);
@@ -195,7 +195,7 @@ a:hover {
 }
 
 .header-phone-cta:hover {
-  background-color: var(--primary-dark);
+  background-color: #b0624a;
   color: #ffffff;
 }
 
@@ -244,7 +244,7 @@ a:hover {
    ======================================== */
 
 .hero {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
   color: #ffffff;
   padding: var(--spacing-3xl) var(--spacing-lg);
   text-align: center;
@@ -385,7 +385,7 @@ a:hover {
 
 .section-title {
   font-size: clamp(28px, 4vw, 40px);
-  color: var(--primary);
+  color: #1a2332;
   margin-bottom: var(--spacing-md);
   font-weight: var(--font-weight-bold);
 }
@@ -432,7 +432,7 @@ a:hover {
 }
 
 .service-card-primary {
-  border-top: 4px solid #0066cc;
+  border-top: 4px solid #1a2332;
 }
 
 .service-card-secondary {
@@ -455,7 +455,7 @@ a:hover {
 }
 
 .service-card-primary .service-icon-container {
-  background-color: rgba(0, 102, 204, 0.1);
+  background-color: rgba(26, 35, 50, 0.1);
 }
 
 .service-card-secondary .service-icon-container {
@@ -493,7 +493,7 @@ a:hover {
 
 .additional-services-title {
   font-size: var(--font-size-xl);
-  color: var(--primary);
+  color: #1a2332;
   margin-bottom: var(--spacing-xl);
   font-weight: var(--font-weight-bold);
 }
@@ -586,7 +586,7 @@ a:hover {
   box-shadow: var(--shadow-md);
   transition: all var(--transition-normal);
   text-align: left;
-  border-top: 4px solid var(--primary);
+  border-top: 4px solid #1a2332;
 }
 
 .benefit-card:hover {
@@ -597,7 +597,7 @@ a:hover {
 .benefit-number {
   font-size: 36px;
   font-weight: var(--font-weight-bold);
-  color: var(--primary);
+  color: #1a2332;
   margin-bottom: var(--spacing-md);
   opacity: 0.7;
 }
@@ -643,7 +643,7 @@ a:hover {
 }
 
 .contact-section-title {
-  color: var(--primary);
+  color: #1a2332;
 }
 
 .contact-layout {
@@ -681,14 +681,14 @@ a:hover {
   gap: var(--spacing-md);
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
-  color: var(--primary);
+  color: var(--accent);
   margin: var(--spacing-lg) 0;
   transition: color var(--transition-fast);
   text-decoration: none;
 }
 
 .contact-phone-link:hover {
-  color: var(--primary-dark);
+  color: #b0624a;
 }
 
 .contact-phone-icon {
@@ -743,8 +743,8 @@ a:hover {
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(201, 114, 78, 0.1);
 }
 
 .form-textarea {
@@ -753,10 +753,10 @@ a:hover {
 }
 
 .btn-form-submit {
-  background-color: var(--primary);
+  background-color: var(--accent);
   color: #ffffff;
   padding: var(--spacing-md) var(--spacing-xl);
-  border: 2px solid var(--primary);
+  border: 2px solid var(--accent);
   border-radius: var(--radius-lg);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-base);
@@ -765,8 +765,8 @@ a:hover {
 }
 
 .btn-form-submit:hover {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
+  background-color: #b0624a;
+  border-color: #b0624a;
   transform: translateY(-2px);
 }
 
@@ -803,7 +803,7 @@ a:hover {
    ======================================== */
 
 .footer {
-  background-color: var(--neutral-dark);
+  background-color: #1a2332;
   color: #ffffff;
   padding: var(--spacing-3xl) var(--spacing-lg);
 }
@@ -845,7 +845,7 @@ a:hover {
 }
 
 .footer-link:hover {
-  color: var(--accent);
+  color: #C9724E;
 }
 
 .footer-bottom {
