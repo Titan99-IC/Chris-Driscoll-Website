@@ -386,6 +386,12 @@ a:hover {
   margin-bottom: var(--spacing-3xl);
 }
 
+.services-section .section-header {
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #C9724E;
+}
+
 .section-title {
   font-size: clamp(28px, 4vw, 40px);
   color: #1a2332;
@@ -419,7 +425,7 @@ a:hover {
    ======================================== */
 
 .services-section {
-  padding: var(--spacing-3xl) var(--spacing-lg);
+  padding: 60px var(--spacing-lg) 40px var(--spacing-lg);
   background-color: #ffffff;
 }
 
@@ -427,7 +433,7 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-xl);
-  margin-bottom: var(--spacing-3xl);
+  margin-bottom: 40px;
 }
 
 .service-card {
@@ -503,8 +509,9 @@ a:hover {
 
 .additional-services {
   background-color: transparent;
-  padding: 0;
+  padding: 40px 0;
   border-radius: 0;
+  margin-bottom: 0;
 }
 
 .additional-services-title {
@@ -591,8 +598,8 @@ a:hover {
    ======================================== */
 
 .why-us-section {
-  padding: var(--spacing-3xl) var(--spacing-lg);
-  background-color: var(--neutral-light);
+  padding: 40px var(--spacing-lg);
+  background-color: #F5F5F5;
 }
 
 .why-us-layout {
@@ -678,7 +685,7 @@ a:hover {
    ======================================== */
 
 .contact-section {
-  padding: var(--spacing-3xl) var(--spacing-lg);
+  padding: 40px var(--spacing-lg);
   background-color: #ffffff;
 }
 
@@ -690,7 +697,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-3xl);
-  margin-top: var(--spacing-3xl);
+  margin-top: 40px;
 }
 
 .contact-block {
