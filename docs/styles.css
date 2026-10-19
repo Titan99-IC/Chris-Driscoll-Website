@@ -53,6 +53,9 @@
   --transition-fast: 150ms ease-in-out;
   --transition-normal: 300ms ease-in-out;
   --transition-slow: 500ms ease-in-out;
+  
+  /* Header Offset for Scroll Padding */
+  --header-offset: 100px;
 }
 
 /* ========================================
@@ -67,6 +70,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset, 100px);
 }
 
 body {

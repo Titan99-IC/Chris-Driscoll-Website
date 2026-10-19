@@ -24,23 +24,29 @@ function handleFormSubmit(event) {
     form.reset();
 }
 
-// Smooth scroll to sections
+// Update header offset CSS variable based on actual header height
+function updateHeaderOffset() {
+    const header = document.querySelector('.header');
+    if (header) {
+        const headerHeight = header.getBoundingClientRect().height;
+        const offset = headerHeight + 16; // 16px breathing room
+        document.documentElement.style.setProperty('--header-offset', `${offset}px`);
+    }
+}
+
+// Initialize dynamic header offset on DOM ready
 document.addEventListener('DOMContentLoaded', function() {
-    const STICKY_NAV_HEIGHT = 75;
-    const links = document.querySelectorAll('a[href^="#"]');
+    // Update header offset on page load
+    updateHeaderOffset();
     
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href !== '#' && document.querySelector(href)) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                const targetPosition = target.getBoundingClientRect().top + window.scrollY;
-                const offsetPosition = targetPosition - STICKY_NAV_HEIGHT;
-                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-            }
-        });
-    });
+    // Set up ResizeObserver to update on header resize (if supported)
+    if (window.ResizeObserver) {
+        const header = document.querySelector('.header');
+        if (header) {
+            const resizeObserver = new ResizeObserver(updateHeaderOffset);
+            resizeObserver.observe(header);
+        }
+    }
     
     // Attach form submit handler
     const contactForm = document.getElementById('contactForm');
