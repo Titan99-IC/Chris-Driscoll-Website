@@ -501,7 +501,7 @@ a:hover {
 .services-section {
    padding: 50px var(--spacing-lg) 32px var(--spacing-lg);
    background-color: #ffffff;
-   scroll-margin-top: 100px;
+    scroll-margin-top: 140px;
 }
   background-color: #F5F5F5;
   background-image: 
@@ -748,7 +748,7 @@ a:hover {
 .why-us-section {
    padding: 32px var(--spacing-lg);
    background-color: #F5F5F5;
-   scroll-margin-top: 100px;
+    scroll-margin-top: 140px;
 }
   display: flex;
   flex-direction: column;
@@ -842,7 +842,7 @@ a:hover {
 .contact-section {
    padding: 32px var(--spacing-lg);
    background-color: #ffffff;
-   scroll-margin-top: 100px;
+    scroll-margin-top: 140px;
 }
   color: #1a2332;
 }
