@@ -319,12 +319,13 @@ a:hover {
 .hero {
   background-color: #0f1419;
   background-image:
+    radial-gradient(ellipse at 30% 40%, rgba(201, 114, 78, 0.08) 0%, transparent 50%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%23C9724E' stroke-opacity='0.11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M200 40c-22 34-40 60-40 84a40 40 0 0 0 80 0c0-24-18-50-40-84z'/%3E%3Cpath d='M70 230c-12 18-22 33-22 46a22 22 0 0 0 44 0c0-13-10-28-22-46z'/%3E%3Cpath d='M330 300l-14-14a10 10 0 0 0-14 0l-40 40a10 10 0 0 0 0 14l4 4a10 10 0 0 0 14 0l4-4 2 2-6 6 8 8 6-6 4 4-8 8 8 8 22-22-10-10z' transform='translate(-10 -6) rotate(-8 330 300)'/%3E%3C/g%3E%3C/svg%3E"),
     radial-gradient(ellipse at 15% 20%, rgba(201, 114, 78, 0.22) 0%, transparent 55%),
     radial-gradient(ellipse at 85% 85%, rgba(176, 98, 74, 0.18) 0%, transparent 55%),
     linear-gradient(160deg, #1a2332 0%, #0f1419 55%, #3a2219 100%);
-  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
-  background-size: 400px 400px, auto, auto, auto;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 400px 400px, auto, auto, auto, auto;
   color: #ffffff;
   padding: 80px var(--spacing-lg);
   text-align: left;
@@ -625,9 +626,10 @@ a:hover {
 }
 
 .featured-services-wrapper {
-  background-color: rgba(201, 114, 78, 0.04);
+  background-color: #FAF5F2;
+  border: 1px solid #E0DDD8;
   border-radius: var(--radius-xl);
-  padding: var(--spacing-2xl);
+  padding: 40px;
   margin-bottom: 40px;
 }
 
@@ -639,10 +641,10 @@ a:hover {
 
 .service-card {
   background: linear-gradient(135deg, #ffffff 0%, #ffffff 45%, rgba(209, 121, 79, 0.12) 100%);
-  padding: 28px;
+  padding: 32px;
   border-radius: var(--radius-xl);
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-  box-shadow: 0 4px 14px rgba(26, 35, 50, 0.08), 0 1px 3px rgba(26, 35, 50, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 4px 14px rgba(26, 35, 50, 0.08), 0 1px 3px rgba(26, 35, 50, 0.05);
   text-align: left;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -729,7 +731,7 @@ a:hover {
 }
 
 .service-card-title {
-  font-size: 20px;
+  font-size: 22px;
   color: var(--neutral-dark);
   margin-bottom: var(--spacing-sm);
   font-weight: 700;
@@ -766,7 +768,7 @@ a:hover {
 .services-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-lg);
+  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -785,8 +787,10 @@ a:hover {
       transparent 2px,
       transparent 4px
     );
+  background-color: rgba(201, 114, 78, 0.05);
+  border: 1px solid rgba(201, 114, 78, 0.15);
   border-left: 4px solid #C9724E;
-  padding: 14px 16px;
+  padding: 18px 20px;
   border-radius: var(--radius-md);
   transition: all var(--transition-normal);
 }
@@ -805,8 +809,8 @@ a:hover {
 
 .service-list-icon {
   flex-shrink: 0;
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
   margin-top: 2px;
   transition: all var(--transition-normal);
   color: #C9724E;
@@ -818,8 +822,9 @@ a:hover {
 
 .service-label {
   color: var(--text-secondary);
-  font-size: var(--font-size-base);
-  line-height: 1.6;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.7;
 }
 
 @media (max-width: 768px) {
