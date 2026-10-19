@@ -388,6 +388,19 @@ a:hover {
   color: #1a2332;
   margin-bottom: var(--spacing-md);
   font-weight: var(--font-weight-bold);
+  position: relative;
+  padding-left: var(--spacing-lg);
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--accent);
+  border-radius: 2px;
 }
 
 .section-subtitle {
@@ -486,9 +499,9 @@ a:hover {
 }
 
 .additional-services {
-  background-color: var(--neutral-light);
-  padding: var(--spacing-2xl);
-  border-radius: var(--radius-xl);
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 
 .additional-services-title {
@@ -496,34 +509,39 @@ a:hover {
   color: #1a2332;
   margin-bottom: var(--spacing-xl);
   font-weight: var(--font-weight-bold);
+  text-align: left;
 }
 
 .services-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--spacing-md);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .service-list-item {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--spacing-md);
-  padding: var(--spacing-sm) 0;
+  display: block;
+  background-color: #F5F5F5;
+  border-left: 4px solid #C9724E;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+.service-list-item:hover {
+  box-shadow: var(--shadow-md);
 }
 
 .service-bullet {
-  flex: 0 0 auto;
-  color: var(--accent);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-lg);
+  display: none;
 }
 
 .service-label {
   color: var(--text-secondary);
   font-size: var(--font-size-base);
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
@@ -541,8 +559,8 @@ a:hover {
     padding: var(--spacing-lg);
   }
   
-  .additional-services {
-    padding: var(--spacing-lg);
+  .services-list {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -806,6 +824,7 @@ a:hover {
   background-color: #1a2332;
   color: #ffffff;
   padding: var(--spacing-3xl) var(--spacing-lg);
+  border-top: 1px solid var(--accent);
 }
 
 .footer-grid {
