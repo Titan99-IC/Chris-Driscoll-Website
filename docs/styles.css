@@ -620,17 +620,10 @@ a:hover {
 
 
 .services-section .additional-services {
-  background-color: #F5F5F5;
-  background-image: 
-    repeating-linear-gradient(
-      45deg,
-      rgba(201, 114, 78, 0.025) 0,
-      rgba(201, 114, 78, 0.025) 2px,
-      transparent 2px,
-      transparent 4px
-    );
-  padding: 32px 24px;
-  border-radius: var(--radius-xl);
+  background-color: transparent;
+  background-image: none;
+  padding: 0;
+  border-radius: 0;
   margin-top: 20px;
 }
 
@@ -750,9 +743,12 @@ a:hover {
 
 .additional-services {
   background-color: transparent;
+  background-image: none;
   padding: 40px 0;
   border-radius: 0;
   margin-bottom: 0;
+  box-shadow: none;
+  border: 0;
 }
 
 .additional-services-title {
@@ -774,43 +770,33 @@ a:hover {
 
 .service-list-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--spacing-md);
-  background-color: #F5F5F5;
-  background-image: 
-    repeating-linear-gradient(
-      45deg,
-      rgba(201, 114, 78, 0.025) 0,
-      rgba(201, 114, 78, 0.025) 2px,
-      transparent 2px,
-      transparent 4px
-    );
-  background-color: rgba(201, 114, 78, 0.05);
-  border: 1px solid rgba(201, 114, 78, 0.15);
-  border-left: 4px solid #C9724E;
-  padding: 18px 20px;
-  border-radius: var(--radius-md);
-  transition: all var(--transition-normal);
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .service-list-item:hover {
-  box-shadow: 0 2px 6px rgba(201, 114, 78, 0.15);
-  background: linear-gradient(90deg, rgba(201, 114, 78, 0.06) 0%, rgba(201, 114, 78, 0.01) 100%);
-  border-left-color: #b0624a;
-  transform: translateX(4px);
+  background: none;
+  box-shadow: none;
+  transform: none;
 }
 
 .service-list-item:hover .service-list-icon {
-  transform: scale(1.15);
-  color: #b0624a;
+  transform: scale(1.05);
+  color: #C9724E;
 }
 
 .service-list-icon {
   flex-shrink: 0;
   width: 34px;
   height: 34px;
-  margin-top: 2px;
-  transition: all var(--transition-normal);
+  margin-top: 0;
+  transition: transform var(--transition-normal);
   color: #C9724E;
 }
 
