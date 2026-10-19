@@ -457,6 +457,7 @@ a:hover {
 .section-header {
   text-align: center;
   margin-bottom: var(--spacing-3xl);
+  scroll-margin-top: 80px;
 }
 
 .services-section .section-header {
@@ -472,6 +473,7 @@ a:hover {
   font-weight: var(--font-weight-bold);
   position: relative;
   padding-left: var(--spacing-lg);
+  scroll-margin-top: 80px;
 }
 
 .section-title::before {
@@ -500,6 +502,7 @@ a:hover {
 .services-section {
   padding: 50px var(--spacing-lg) 32px var(--spacing-lg);
   background-color: #ffffff;
+  scroll-margin-top: 80px;
 }
 
 .services-section .additional-services {
@@ -746,6 +749,7 @@ a:hover {
 .why-us-section {
   padding: 32px var(--spacing-lg);
   background-color: #F5F5F5;
+  scroll-margin-top: 80px;
 }
 
 .why-us-layout {
@@ -839,6 +843,7 @@ a:hover {
 .contact-section {
   padding: 32px var(--spacing-lg);
   background-color: #ffffff;
+  scroll-margin-top: 80px;
 }
 
 .contact-section-title {
