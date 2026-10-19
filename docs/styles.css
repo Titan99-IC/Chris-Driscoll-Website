@@ -498,7 +498,6 @@ a:hover {
 
 .services-section {
   position: relative;
-  padding-top: 75px;
   padding-bottom: 32px;
   padding-left: var(--spacing-lg);
   padding-right: var(--spacing-lg);
@@ -511,6 +510,13 @@ a:hover {
       transparent 2px,
       transparent 4px
     );
+}
+
+.services-section::before {
+  display: block;
+  content: '';
+  height: 75px;
+  margin-top: -75px;
 }
 
 .featured-services-wrapper {
@@ -741,7 +747,6 @@ a:hover {
 
 .why-us-section {
   position: relative;
-  padding-top: 75px;
   padding-bottom: 32px;
   padding-left: var(--spacing-lg);
   padding-right: var(--spacing-lg);
@@ -749,6 +754,13 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3xl);
+}
+
+.why-us-section::before {
+  display: block;
+  content: '';
+  height: 75px;
+  margin-top: -75px;
 }
 
 .why-us-intro {
@@ -835,12 +847,18 @@ a:hover {
 
 .contact-section {
   position: relative;
-  padding-top: 75px;
   padding-bottom: 32px;
   padding-left: var(--spacing-lg);
   padding-right: var(--spacing-lg);
   background-color: #ffffff;
   color: #1a2332;
+}
+
+.contact-section::before {
+  display: block;
+  content: '';
+  height: 75px;
+  margin-top: -75px;
 }
 
 .contact-layout {
