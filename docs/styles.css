@@ -498,7 +498,6 @@ a:hover {
 
 .services-section {
   position: relative;
-  margin-top: -75px;
   padding-top: 75px;
   padding-bottom: 32px;
   padding-left: var(--spacing-lg);
@@ -742,7 +741,6 @@ a:hover {
 
 .why-us-section {
   position: relative;
-  margin-top: -75px;
   padding-top: 75px;
   padding-bottom: 32px;
   padding-left: var(--spacing-lg);
@@ -837,7 +835,6 @@ a:hover {
 
 .contact-section {
   position: relative;
-  margin-top: -75px;
   padding-top: 75px;
   padding-bottom: 32px;
   padding-left: var(--spacing-lg);
