@@ -26,6 +26,7 @@ function handleFormSubmit(event) {
 
 // Smooth scroll to sections
 document.addEventListener('DOMContentLoaded', function() {
+    const STICKY_NAV_HEIGHT = 75;
     const links = document.querySelectorAll('a[href^="#"]');
     
     links.forEach(link => {
@@ -34,7 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (href !== '#' && document.querySelector(href)) {
                 e.preventDefault();
                 const target = document.querySelector(href);
-                target.scrollIntoView({ behavior: 'smooth' });
+                const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = targetPosition - STICKY_NAV_HEIGHT;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
             }
         });
     });
