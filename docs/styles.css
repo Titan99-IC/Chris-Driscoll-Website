@@ -967,28 +967,35 @@ a:hover {
 
 .form-label {
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
-  color: var(--neutral-dark);
+  font-weight: 600;
+  color: #1a2332;
+  letter-spacing: 0.3px;
 }
 
 .form-input,
 .form-textarea {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-base);
-  padding: var(--spacing-md);
-  border: 1px solid var(--border-color);
+  padding: 12px 14px;
+  border: 1px solid rgba(201, 114, 78, 0.3);
   border-radius: var(--radius-lg);
   color: var(--text-primary);
-  background-color: #ffffff;
+  background-color: rgba(201, 114, 78, 0.04);
   transition: all var(--transition-fast);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(150, 150, 150, 0.7);
+  font-size: var(--font-size-base);
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(201, 114, 78, 0.1), 0 0 0 1px var(--accent);
-  background-color: rgba(201, 114, 78, 0.02);
+  border: 2px solid #C9724E;
+  box-shadow: 0 0 0 3px rgba(201, 114, 78, 0.15);
+  background-color: rgba(201, 114, 78, 0.06);
 }
 
 .form-textarea {
@@ -997,23 +1004,29 @@ a:hover {
 }
 
 .btn-form-submit {
-  background-color: var(--accent);
+  background: linear-gradient(135deg, #C9724E 0%, #b0624a 100%);
   color: #ffffff;
-  padding: var(--spacing-md) var(--spacing-xl);
-  border: 2px solid var(--accent);
+  padding: 14px 40px;
+  border: 2px solid #C9724E;
   border-radius: var(--radius-lg);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-base);
+  font-weight: 700;
+  font-size: 1.05em;
   cursor: pointer;
-  transition: all var(--transition-fast);
-  box-shadow: 0 2px 6px rgba(201, 114, 78, 0.15);
+  transition: all var(--transition-normal);
+  box-shadow: 0 6px 16px rgba(201, 114, 78, 0.3);
+  letter-spacing: 0.3px;
+  align-self: flex-start;
 }
 
 .btn-form-submit:hover {
-  background-color: #b0624a;
-  border-color: #b0624a;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(201, 114, 78, 0.25);
+  background: linear-gradient(135deg, #b0624a 0%, #9d5241 100%);
+  border-color: #9d5241;
+  transform: scale(1.02);
+  box-shadow: 0 10px 24px rgba(201, 114, 78, 0.4);
+}
+
+.btn-form-submit:active {
+  transform: scale(0.98);
 }
 
 .form-note {
