@@ -497,12 +497,12 @@ a:hover {
    ======================================== */
 
 .services-section {
-  padding: 50px var(--spacing-lg) 32px var(--spacing-lg);
-.services-section {
-   padding: 50px var(--spacing-lg) 32px var(--spacing-lg);
-   background-color: #ffffff;
-    scroll-margin-top: 140px;
-}
+  position: relative;
+  margin-top: -75px;
+  padding-top: 75px;
+  padding-bottom: 32px;
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
   background-color: #F5F5F5;
   background-image: 
     repeating-linear-gradient(
@@ -512,9 +512,6 @@ a:hover {
       transparent 2px,
       transparent 4px
     );
-  padding: 32px 24px;
-  border-radius: var(--radius-xl);
-  margin-top: 20px;
 }
 
 .featured-services-wrapper {
@@ -744,12 +741,13 @@ a:hover {
    ======================================== */
 
 .why-us-section {
-  padding: 32px var(--spacing-lg);
-.why-us-section {
-   padding: 32px var(--spacing-lg);
-   background-color: #F5F5F5;
-    scroll-margin-top: 140px;
-}
+  position: relative;
+  margin-top: -75px;
+  padding-top: 75px;
+  padding-bottom: 32px;
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+  background-color: #F5F5F5;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3xl);
@@ -838,12 +836,13 @@ a:hover {
    ======================================== */
 
 .contact-section {
-  padding: 32px var(--spacing-lg);
-.contact-section {
-   padding: 32px var(--spacing-lg);
-   background-color: #ffffff;
-    scroll-margin-top: 140px;
-}
+  position: relative;
+  margin-top: -75px;
+  padding-top: 75px;
+  padding-bottom: 32px;
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+  background-color: #ffffff;
   color: #1a2332;
 }
 
