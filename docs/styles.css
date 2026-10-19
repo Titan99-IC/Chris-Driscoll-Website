@@ -979,24 +979,24 @@ a:hover {
 }
 
 .contact-call-section {
-  background: #FFFFFF;
-  border-top: 3px solid #C9724E;
-  border-left: 3px solid #C9724E;
-  border-radius: var(--radius-xl);
-  padding: 32px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(201, 114, 78, 0.06);
 }
 
 .contact-form-section {
-  background-color: #FFFAF8;
-  border-radius: var(--radius-xl);
-  border-top: 2px solid #C9724E;
-  padding: 56px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: 0;
+  border-top: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
 .contact-phone-link {
