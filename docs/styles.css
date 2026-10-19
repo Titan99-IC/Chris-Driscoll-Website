@@ -96,6 +96,8 @@ h2 {
   font-size: var(--font-size-2xl);
   margin-bottom: var(--spacing-md);
   color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.75px;
 }
 
 h3 {
@@ -106,6 +108,7 @@ h3 {
 p {
   margin-bottom: var(--spacing-md);
   color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 a {
@@ -522,7 +525,9 @@ a:hover {
 }
 
 .service-list-item {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
   background-color: #F5F5F5;
   border-left: 4px solid #C9724E;
   padding: var(--spacing-md);
@@ -535,7 +540,24 @@ a:hover {
 }
 
 .service-bullet {
-  display: none;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #C9724E 0%, #D8825B 100%);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  content: '✓';
+}
+
+.service-bullet::before {
+  content: '✓';
 }
 
 .service-label {
@@ -678,6 +700,23 @@ a:hover {
   box-shadow: var(--shadow-md);
 }
 
+.contact-call-block {
+  background-color: #F9F9F9;
+  border-left: 6px solid #C9724E;
+  padding: var(--spacing-md);
+}
+
+.contact-form-block {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+.contact-phone-link {
+  font-size: 24px;
+  font-weight: 700;
+}
+
 .contact-block-title {
   font-size: var(--font-size-lg);
   color: var(--neutral-dark);
@@ -802,13 +841,46 @@ a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  .contact-call-block {
+    background-color: #F9F9F9;
+    border-left: 6px solid #C9724E;
+    padding: var(--spacing-md);
+    margin-bottom: 20px;
+  }
+  
+  .contact-form-block {
+    background-color: #ffffff;
+    border: 1px solid #E0E0E0;
+    padding: 16px;
+  }
+  
+  .contact-phone-link {
+    font-size: 22px;
+  }
+}
+
 @media (max-width: 480px) {
   .contact-block {
     padding: var(--spacing-lg);
   }
   
+  .contact-call-block {
+    background-color: #F9F9F9;
+    border-left: 6px solid #C9724E;
+    padding: var(--spacing-md);
+    margin-bottom: 20px;
+  }
+  
+  .contact-form-block {
+    background-color: #ffffff;
+    border: 1px solid #E0E0E0;
+    padding: 16px;
+  }
+  
   .contact-phone-link {
-    font-size: var(--font-size-lg);
+    font-size: 22px;
+    font-weight: 700;
   }
   
   .contact-phone-icon {
