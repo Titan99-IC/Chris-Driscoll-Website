@@ -626,10 +626,6 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 28px;
-.featured-services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 28px;
 }
 
 .service-card {
@@ -702,34 +698,9 @@ a:hover {
   grid-column: 2;
   grid-row: 2;
 }
-  height: 40px;
-  color: #C9724E;
-  flex-shrink: 0;
-  transition: transform var(--transition-normal);
-}
 
 .service-card:hover .service-icon {
   transform: scale(1.1);
-}
-
-.service-card-title {
-  font-size: 22px;
-  color: var(--neutral-dark);
-  margin-bottom: var(--spacing-sm);
-  font-weight: 700;
-  line-height: 1.5;
-  grid-column: 2;
-  grid-row: 1;
-  align-self: start;
-}
-
-.service-card-text {
-  font-size: var(--font-size-base);
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin: 0;
-  grid-column: 2;
-  grid-row: 2;
 }
 
 .additional-services {
