@@ -326,7 +326,8 @@ a:hover {
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%23C9724E' stroke-opacity='0.11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M200 40c-22 34-40 60-40 84a40 40 0 0 0 80 0c0-24-18-50-40-84z'/%3E%3Cpath d='M70 230c-12 18-22 33-22 46a22 22 0 0 0 44 0c0-13-10-28-22-46z'/%3E%3Cpath d='M330 300l-14-14a10 10 0 0 0-14 0l-40 40a10 10 0 0 0 0 14l4 4a10 10 0 0 0 14 0l4-4 2 2-6 6 8 8 6-6 4 4-8 8 8 8 22-22-10-10z' transform='translate(-10 -6) rotate(-8 330 300)'/%3E%3C/g%3E%3C/svg%3E"),
     linear-gradient(160deg, #1a2332 0%, #0f1419 55%, #3a2219 100%);
-  background-repeat: repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat;
+  background-position: right center, 0 0;
   background-size: 400px 400px, auto;
   color: #ffffff;
   padding: 80px var(--spacing-lg);
