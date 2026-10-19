@@ -454,11 +454,17 @@ a:hover {
   margin-top: 20px;
 }
 
+.featured-services-wrapper {
+  background-color: rgba(201, 114, 78, 0.04);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  margin-bottom: 40px;
+}
+
 .featured-services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-xl);
-  margin-bottom: 40px;
 }
 
 .service-card {
@@ -643,6 +649,10 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .featured-services-wrapper {
+    padding: var(--spacing-lg);
+  }
+  
   .featured-services {
     grid-template-columns: 1fr;
   }
@@ -672,14 +682,13 @@ a:hover {
 }
 
 .why-us-layout {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  flex-direction: column;
   gap: var(--spacing-3xl);
-  align-items: start;
 }
 
 .why-us-intro {
-  padding: var(--spacing-lg) 0;
+  max-width: 800px;
 }
 
 .why-us-lead {
@@ -687,41 +696,51 @@ a:hover {
   color: var(--text-secondary);
   line-height: 1.8;
   font-weight: var(--font-weight-regular);
+  margin: 0;
 }
 
-.benefits-grid {
+.why-us-benefits {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-2xl);
 }
 
-.benefit-card {
-  background-color: #ffffff;
-  padding: var(--spacing-2xl);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-md);
+.benefit-column {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.benefit-checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background-color: #C9724E;
+  border-radius: 50%;
+  flex-shrink: 0;
   transition: all var(--transition-normal);
-  text-align: left;
-  border-top: 4px solid #1a2332;
 }
 
-.benefit-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+.benefit-column:hover .benefit-checkmark {
+  background-color: #b0624a;
+  transform: scale(1.08);
 }
 
-.benefit-number {
-  font-size: 36px;
-  font-weight: var(--font-weight-bold);
-  color: #1a2332;
-  margin-bottom: var(--spacing-md);
-  opacity: 0.7;
+.benefit-checkmark svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
 }
 
 .benefit-title {
   font-size: var(--font-size-lg);
   color: var(--neutral-dark);
-  margin-bottom: var(--spacing-md);
+  margin: 0;
   font-weight: var(--font-weight-bold);
 }
 
@@ -732,84 +751,15 @@ a:hover {
   margin: 0;
 }
 
-/* Credential Icons in Why Us Section */
-.why-us-text-wrapper {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: var(--spacing-xl);
-}
-
-.credential-icons {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  flex-shrink: 0;
-  width: 32px;
-}
-
-.credential-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  background-color: #C9724E;
-  border-radius: 50%;
-  padding: 0;
-  flex-shrink: 0;
-  transition: all var(--transition-fast);
-}
-
-.credential-icon:hover {
-  background-color: #b0624a;
-  transform: scale(1.08);
-}
-
-.credential-icon svg {
-  width: 20px;
-  height: 20px;
-  display: block;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
-}
-
 
 @media (max-width: 768px) {
-  .why-us-layout {
+  .why-us-benefits {
     grid-template-columns: 1fr;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-xl);
   }
   
-  .why-us-text-wrapper {
-    flex-direction: column;
-    gap: var(--spacing-md);
-  }
-  
-  .credential-icons {
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: var(--spacing-md);
-    width: auto;
-  }
-  
-  .benefits-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .benefit-card {
-    padding: var(--spacing-lg);
-  }
-  
-  .why-us-text-wrapper {
-    flex-direction: column;
-  }
-  
-  .credential-icons {
-    flex-direction: row;
-    justify-content: flex-start;
-    width: auto;
+  .benefit-column {
+    text-align: center;
   }
 }
 
@@ -827,8 +777,15 @@ a:hover {
 }
 
 .contact-layout {
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  margin-top: 40px;
+}
+
+.contact-layout-desktop {
+  display: grid;
+  grid-template-columns: 40% 60%;
   gap: var(--spacing-3xl);
   margin-top: 40px;
 }
@@ -850,6 +807,25 @@ a:hover {
   background-color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 24px;
+}
+
+.contact-call-section {
+  background: linear-gradient(135deg, rgba(201, 114, 78, 0.1) 0%, rgba(201, 114, 78, 0.04) 100%);
+  border: 1px solid rgba(201, 114, 78, 0.15);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(201, 114, 78, 0.06);
+}
+
+.contact-form-section {
+  background-color: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .contact-phone-link {
@@ -976,12 +952,16 @@ a:hover {
 
 @media (max-width: 768px) {
   .contact-layout {
+    display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-2xl);
+    margin-top: 40px;
   }
-}
-
-@media (max-width: 768px) {
+  
+  .contact-layout-desktop {
+    display: none;
+  }
+  
   .contact-call-block {
     background-color: #F9F9F9;
     border-left: 6px solid #C9724E;
