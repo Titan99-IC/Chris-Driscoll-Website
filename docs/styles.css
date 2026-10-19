@@ -67,7 +67,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 75px;
 }
 
 body {
@@ -471,18 +470,6 @@ a:hover {
    color: #1a2332;
    margin-bottom: var(--spacing-md);
    font-weight: var(--font-weight-bold);
-   position: relative;
-   padding-left: var(--spacing-lg);
-}
-.section-title::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background-color: var(--accent);
-  border-radius: 2px;
 }
 
 .section-subtitle {
@@ -507,7 +494,7 @@ a:hover {
       transparent 2px,
       transparent 4px
     );
-  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-lg);
+  padding: var(--spacing-3xl) var(--spacing-lg);
 }
 
 .featured-services-wrapper {
@@ -738,7 +725,7 @@ a:hover {
 
 .why-us-section {
   background-color: #F5F5F5;
-  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-lg);
+  padding: var(--spacing-3xl) var(--spacing-lg);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-3xl);
@@ -827,7 +814,7 @@ a:hover {
    ======================================== */
 
 .contact-section {
-  padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-lg);
+  padding: var(--spacing-3xl) var(--spacing-lg);
   background-color: #ffffff;
   color: #1a2332;
 }
