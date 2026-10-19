@@ -126,13 +126,22 @@ a:hover {
    ======================================== */
 
 .header {
-  background-color: var(--primary);
-  border-bottom: 1px solid var(--accent);
+  background: linear-gradient(180deg, var(--primary) 0%, #141c2a 100%);
+  background-image: 
+    linear-gradient(180deg, var(--primary) 0%, #141c2a 100%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.02) 0,
+      rgba(255, 255, 255, 0.02) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+  border-bottom: 2px solid var(--accent);
   padding: var(--spacing-md) var(--spacing-lg);
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
@@ -154,13 +163,17 @@ a:hover {
   font-weight: var(--font-weight-bold);
   color: #ffffff;
   margin-bottom: var(--spacing-xs);
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .brand-credential {
   font-size: var(--font-size-xs);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.75);
   font-weight: var(--font-weight-regular);
   margin: 0;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .main-nav {
@@ -174,12 +187,30 @@ a:hover {
 .nav-link {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
-  color: rgba(255, 255, 255, 0.9);
-  transition: color var(--transition-fast);
+  color: rgba(255, 255, 255, 0.88);
+  transition: all var(--transition-fast);
+  position: relative;
+  padding-bottom: 4px;
+  letter-spacing: 0.3px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width var(--transition-normal);
 }
 
 .nav-link:hover {
   color: var(--accent);
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .header-phone-cta {
@@ -187,19 +218,23 @@ a:hover {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-md);
-  background-color: var(--accent);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--accent) 0%, #b0624a 100%);
   color: #ffffff;
   border-radius: var(--radius-lg);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
   font-size: var(--font-size-base);
-  transition: background-color var(--transition-fast);
+  transition: all var(--transition-normal);
   white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(201, 114, 78, 0.35);
+  letter-spacing: 0.3px;
 }
 
 .header-phone-cta:hover {
-  background-color: #b0624a;
+  background: linear-gradient(135deg, #b0624a 0%, #9d5241 100%);
   color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(201, 114, 78, 0.45);
 }
 
 .phone-icon {
@@ -211,6 +246,10 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .header {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
   .header-container {
     flex-wrap: wrap;
     gap: var(--spacing-md);
@@ -1021,25 +1060,48 @@ a:hover {
    ======================================== */
 
 .footer {
-  background-color: #1a2332;
+  background: linear-gradient(180deg, #1a2332 0%, #141c2a 100%);
+  background-image: 
+    linear-gradient(180deg, #1a2332 0%, #141c2a 100%),
+    repeating-linear-gradient(
+      45deg,
+      rgba(201, 114, 78, 0.03) 0,
+      rgba(201, 114, 78, 0.03) 2px,
+      transparent 2px,
+      transparent 4px
+    );
   color: #ffffff;
   padding: var(--spacing-3xl) var(--spacing-lg);
-  border-top: 1px solid var(--accent);
+  border-top: 3px solid var(--accent);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-2xl);
-  margin-bottom: var(--spacing-2xl);
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-3xl);
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .footer-column {
   display: flex;
   flex-direction: column;
+  padding: var(--spacing-md) 0;
+  position: relative;
+}
+
+.footer-column:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: calc(var(--spacing-3xl) * -0.5);
+  top: 0;
+  height: 80%;
+  width: 1px;
+  background-color: rgba(201, 114, 78, 0.2);
 }
 
 .footer-heading {
@@ -1047,29 +1109,55 @@ a:hover {
   font-weight: var(--font-weight-bold);
   color: #ffffff;
   margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 2px solid var(--accent);
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .footer-text {
   font-size: var(--font-size-base);
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
   margin: 0 0 var(--spacing-md) 0;
+  padding-left: var(--spacing-md);
+  border-left: 3px solid rgba(201, 114, 78, 0.4);
+  transition: all var(--transition-fast);
 }
 
 .footer-link {
   color: rgba(255, 255, 255, 0.85);
-  font-weight: var(--font-weight-medium);
-  transition: color var(--transition-fast);
+  font-weight: var(--font-weight-bold);
+  transition: all var(--transition-normal);
   text-decoration: none;
+  display: inline-block;
+  padding: 4px 0;
+  position: relative;
+  letter-spacing: 0.2px;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width var(--transition-normal);
 }
 
 .footer-link:hover {
-  color: #C9724E;
+  color: var(--accent);
+}
+
+.footer-link:hover::after {
+  width: 100%;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: var(--spacing-lg);
+  border-top: 2px solid rgba(201, 114, 78, 0.3);
+  padding-top: var(--spacing-xl);
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -1077,14 +1165,19 @@ a:hover {
 
 .footer-copyright {
   font-size: var(--font-size-sm);
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.7);
   margin: 0;
+  letter-spacing: 0.2px;
 }
 
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
+  }
+  
+  .footer-column::after {
+    display: none;
   }
 }
 
@@ -1095,6 +1188,14 @@ a:hover {
   
   .footer-grid {
     gap: var(--spacing-lg);
+  }
+  
+  .footer-text {
+    padding-left: var(--spacing-sm);
+  }
+  
+  .footer-heading {
+    font-size: var(--font-size-base);
   }
 }
 
