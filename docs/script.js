@@ -1,4 +1,4 @@
-// Chris Driscoll Plumbing - Interactive Features
+// Shelmet Plumbing Contractors - Interactive Features
 
 // Form submission handler
 function handleFormSubmit(event) {
